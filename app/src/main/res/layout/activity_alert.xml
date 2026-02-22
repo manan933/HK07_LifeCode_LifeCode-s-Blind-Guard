@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#121212"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/alertTitle"
+        android:text="EMERGENCY"
+        android:textSize="26sp"
+        android:textColor="#FF5252"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/locationText"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/openMap"
+        android:text="Open in Maps"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

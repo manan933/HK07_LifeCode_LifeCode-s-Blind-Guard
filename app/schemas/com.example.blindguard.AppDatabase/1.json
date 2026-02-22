@@ -1,0 +1,55 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "27efa1f9ac1f14c93698364df926747e",
+    "entities": [
+      {
+        "tableName": "alerts",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`type` TEXT NOT NULL, `latitude` TEXT NOT NULL, `longitude` TEXT NOT NULL, `timestamp` INTEGER NOT NULL, `id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "latitude",
+            "columnName": "latitude",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "longitude",
+            "columnName": "longitude",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timestamp",
+            "columnName": "timestamp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '27efa1f9ac1f14c93698364df926747e')"
+    ]
+  }
+}
